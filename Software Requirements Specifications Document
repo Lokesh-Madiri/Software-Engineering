@@ -1,0 +1,212 @@
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{graphicx}
+
+\geometry{a4paper, margin=1in}
+
+\begin{document}
+
+\begin{titlepage}
+    \raggedleft
+    \vspace*{\fill}
+    \textbf{\Huge Software Requirements Specification}\\[3cm]
+\begin{center}
+    \textbf{\Huge for}\\[3cm]
+    \textbf{\Huge \textsc{PASSPORT AUTOMATION\\[0.5cm]SYSTEM}}\\[4cm]
+\end{center}
+
+\rule{\textwidth}{0.4mm} 
+
+\vspace{0.5cm}
+
+\begin{center}
+    \large Prepared by: \\[0.4cm]
+    \large Madiri Lokesh \\
+    \large Madaka Anil Kumar \\ 
+    \large Makireddi Vijay Kumar \\ 
+    \large Malavathu Dharani \\[0.4cm]
+\end{center}
+
+    \large [August 8,2024]\\
+    \vspace*{\fill}
+\end{titlepage}
+\newpage
+\tableofcontents
+\newpage
+\section{introduction}
+\subsection{introduction}
+    The purpose of the document is to detail the requirements for the passport automation system ,which will streamline  the passport application,process and issuance workflow 
+\subsection{Document Convention}
+    \textbf{BOLD} : for emphasis\\
+    \textit{italic} : for references\\
+    \texttt{code} : for inline code\\
+\subsection{Intended Audience and Reading Suggestions}
+This document is intended for software developers,projects managers,and stakeholders involved in the passport automation system project.Readers are suggested to start with the overall description before diving into specific requirements.
+\subsection{Product Scope}
+The Passport Automation System aims to automate the entire passport application process, including submission, verification, approval, and issuance. The system will ensure a more efficient and secure workflow, reducing manual errors and processing times.
+
+
+\subsection{References}
+Relevant governmental regulations and standards for passport issuance.
+
+\begin{itemize}
+ \item \textit{\href{https://www.passportindia.gov.in}{https://www.passportindia.gov.in}}
+\item \textit{\href{https://www.mea.gov.in}{https://www.mea.gov.in}}
+\end{itemize}
+
+
+\section{Overall Description}
+
+\subsection{Product Perspective}
+    The Passport Automation System will integrate with existing government databases and systems for verification and processing of applications.
+
+    
+\subsection{Product Fuctions}
+Online application submission.
+Document upload and verification.
+Appointment scheduling.
+Application tracking.
+Notification system for status updates.
+Passport printing and issuance.
+
+
+\subsection{User Classes and Characteristics}
+Applicants: Individuals applying for a passport.\\
+Administrators: Government officials managing the application process.\\
+Verifiers: Officials responsible for verifying documents and applicant information.\\
+IT Support: Personnel providing technical support for the system.\\
+
+
+\subsection{Operating Environment}
+The system will be web-based, accessible via standard web browsers, and mobile-compatible.
+
+\subsection{Design and Implementation Constraints}
+Must comply with data protection regulations.\\
+Integration with existing government databases.\\
+High availability and fault tolerance\\
+
+
+\subsection{User Documentation}
+User manuals and online help resources will be provided for applicants and administrators.
+
+
+\subsection{Assumptions and Dependencies}
+Reliable internet connection for accessing the system.\\
+Up-to-date web browsers.\\
+
+
+\section{External Interface Requirements}
+
+\subsection{User Interfaces}
+User-friendly web interface for applicants.\\
+\includegraphics[height=2in, width=2in]{1.jpg}
+\includegraphics[height=2in, width=2in]{2.jpg}
+Administrative dashboard for managing applications.\\
+Mobile interface for on-the-go access.\\
+\includegraphics[height=2in, width=2in]{3.jpg}
+
+
+\subsection{Hardware Interfaces}
+Biometric devices for capturing applicant fingerprints.\\
+Document scanners for uploading verification documents.\\
+
+
+\subsection{Software Requirements}
+Integration with national ID database.\\
+Integration with postal services for passport delivery.\\
+
+
+\subsection{Communication Interfaces}
+Secure email and SMS notifications for application status updates.
+
+
+\section{System Features}
+
+\subsection{Online Application Submission}
+Description: Users can submit their passport applications online through a user-friendly web interface.\\
+
+Functional Requirements:\\
+Users can create an account and log in.\\
+Users can fill out a detailed application form.\\
+Users can upload necessary documents (e.g., ID proof, address proof, photos).\\
+Form validation to ensure all required fields are completed correctly.\\
+
+
+\subsection{Document Verification}
+Description: Automated and manual verification of submitted documents.\\
+
+Functional Requirements:\\
+System checks for the completeness of uploaded documents.\\
+Automated verification against government databases (e.g., national ID, birth records).\\
+Flagging of applications with discrepancies for manual review.\\
+
+
+\subsection{Application Tracking}
+Description: Real-time tracking of application status for users.\\
+
+Functional Requirements:\\
+Users can log in to their account to check the status of their application.\\
+Status updates at key stages (e.g., submission received, under review, approved, dispatched).\\
+Email and SMS notifications for significant status changes.\\
+
+
+\subsection{Notification System}
+Description: Automated notifications to keep users informed about their application progress.\\
+
+Functional Requirements:\\
+Email and SMS notifications for submission confirmation, appointment reminders, status updates, and passport dispatch.\\
+Customizable notification templates for different stages\\
+
+
+\subsection{Passport Printing and Issuance}
+Description: Management of user roles and permissions within the system.\\
+
+Functional Requirements:\\
+Role-based access control (e.g., applicants, verifiers, administrators).\\
+\includegraphics[height=2in, width=2in]{4.jpg}
+\includegraphics[height=2in, width=2in]{5.jpg}
+Administrative interface for adding, modifying, and removing users.\\
+Audit trails for actions performed by users for accountability.\\
+
+
+\subsection{Document Upload}
+Description: Users should be able to upload their  documents through the filling documemts\\
+Functional Requirements;\\
+
+during the uploading the software needs to check whether the document id correctly taken or not\\
+users should be able  to access their input  materials such as camera,document readers etc,.\\
+
+
+\subsection{Help and Support}
+Description: Providing assistance to users through various support channels.\\
+
+Functional Requirements:\\
+Online help resources (e.g., FAQs, user guides).\\
+Customer support via email, phone, and chat.\\
+Ticketing system for tracking and resolving user issues.\\
+
+
+\section{Other Non Functional Requirements}
+\subsection{Performance Requirements}
+The system should support concurrent access by up to 10,000 users.\\
+Application processing time should not exceed 2 minutes per application.\\
+
+
+\subsection{Safety Requirements}
+Ensure data integrity and recovery in case of system failure.
+
+\subsection{Security Requirements}
+User authentication and role-based access control.\\
+Data encryption for sensitive information.\\
+
+
+\subsection{Software Quality Attributes}
+Usability: Easy to navigate interfaces.\\
+Reliability: System uptime of 99.9%.\\
+Maintainability: Modular design for easy updates.\\
+Scalability: Ability to handle increasing number of applications.\\
+
+\end{document}
