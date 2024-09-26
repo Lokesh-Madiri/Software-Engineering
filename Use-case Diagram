@@ -1,0 +1,52 @@
+@startuml
+skinparam linetype ortho
+left to right direction
+
+actor Admin
+actor Applicant
+actor Government
+
+rectangle AdminPortal {
+     (AdminLogin)
+     (Get Details)
+     
+     (Passport Verification)
+    (Update Status)
+     (Issue Passport)
+
+   
+   
+}
+
+rectangle ApplicantPortal {
+   
+    (Login)
+    (Submit Details)  
+
+    (Check Status)
+   
+      (Get Notification)
+
+}
+
+
+Admin --- (Update Status)
+Admin --- (Passport Verification)
+Admin --- (Get Details)
+Admin -- (AdminLogin)
+Admin --- (Issue Passport)
+
+
+
+Applicant --- (Submit Details)
+Applicant --- (Check Status)
+Applicant --- (Login)
+Applicant --- (Get Notification)
+
+(Passport Verification) --- Government
+(Update Status) --- Government
+(AdminLogin) --- Government
+(Issue Passport) --- Government
+
+ApplicantPortal ......>AdminPortal:<include>
+@enduml
