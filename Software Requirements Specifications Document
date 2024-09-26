@@ -209,4 +209,53 @@ Reliability: System uptime of 99.9%.\\
 Maintainability: Modular design for easy updates.\\
 Scalability: Ability to handle increasing number of applications.\\
 
+
+\section{Use Case Diagram}
+\includegraphics[height = 5in,width = 7in]{Use-Case Diagram for PAS.png}
+\subsection{Use Case Description}
+\textbf{System} : Passport Automation System\\\\
+\textbf{Actors}:\\
+ * Applicant\\
+ * Admin\\
+ * Passport Officer\\\\
+\textbf{Trigger}: When an applicant tries to register for a passport, they are redirected to the Applicant Portal, which triggers the use case.\\\\
+\textbf{Preconditions}:\\
+ * The applicant must be at least 18 years old to apply for a passport.\\
+ * The applicant should login/register to their account by filling in all relevant details.\\
+ * The applicant should submit the details of the passport application.\\\\
+\textbf{Post Condition} :\\
+After submitting the document (Application sent through verifications)
+When the Application passed all the conditions and railed the applicant would get a notification.
+Applicants would be given a issuance passport.\\\\
+\textbf{Main Line Scenario}:\\\\
+\textbf{Applicant Login}\\\\
+Applicant logs in to the applicant portal using username and password.
+Form Filling: Applicant is required to fill a form that will be stored and reused when required throughout the process. Applicant, after filling, would submit the details.\\\\
+\textbf{Admin Login} :\\\\
+Admin logs into the admin portal using the assigned username and password.
+Retrieve Details.\\
+To verify the application, the admin retrieves the applicant's details through the database.\\\\
+\textbf{Verification Stages} :\\\\
+Stage 1:\\
+The application undergoes stage 1 verification done by the admin.
+Admin takes care of online verification.
+Passport Officer Login
+The officer would log in to the admin portal using the assigned username and password.\\
+Stage 2:\\
+The application undergoes stage 2 verification done by a passport officer, which is usually offline.\\\\
+\textbf{Notification} :\\\\
+At every verification stage, the applicant would get a message about the success or failure (that is the output of the stage).\\\\
+\textbf{Update Status} :\\\\
+The status of the passport would also be viewed in the online applicant portal by the Application Tracking option.\\\\
+\textbf{Passport Issuance} :\\\\
+If the passport application clears all the stages, the passport for the applicant would be issued.\\\\
+\textbf{Alternate Flow} : \\\\
+\textbf{Age Restriction}\\\\
+When the applicant's age is less than 18, the applicant portal would give a message about the age restriction.\\\\
+\textbf{Document Visibility} :\\\\
+When the applicant's documnets were of too low for visibility.The applicant would be kept in pending state and notification would be sent to the application\\\\
+\textbf{Irregularities} :\\\\
+If any irregularities are found in the documents, the application would be rejected.\\\\
+\textbf{Multiple Application} :\\\\
+An Applicant could  try to apply for an passport only once and if rejected checking irregularities would be taken.\\\\
 \end{document}
